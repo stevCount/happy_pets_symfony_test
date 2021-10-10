@@ -4,8 +4,57 @@
 
 {% block body %}
 
-<div class="">
+<style>
+    .col-option{
+        width: 400px;
+        height: 400px;
+    }
 
-<a href="{{ path('pets.register.pet') }}">Mascotas</a>
+    .text-img-option{
+        text-decoration: none;
+        color: black;
+        font-weight: 800;
+        font-size: 19px;
+    }
+
+    .text-img-option:hover{
+        text-decoration: none;
+        color: black;
+        font-weight: 800;
+    }
+
+    .span-text{
+
+    }
+    
+</style>
+
+<div class="container fluid">
+
+
+<div class="row mt-5">
+
+    <div class="col-4">
+      <a href="{{ path('pets.register.pet') }}" class="text-img-option">
+         <img alt="Qries" src="{{ asset('img/login_col.jpg') }}" class="col-option">
+         <span class"span-text">Mascotas</span>
+      </a>
+    </div>
+
+    <div class="col-4">
+      <a href="{{ path('dashboard') }}" class="text-img-option">
+         <img alt="Qries" src="{{ asset('img/login_col.jpg') }}" class="col-option">
+         <span class"span-text">Citas</span>
+      </a>
+    </div>
+
+    <div class="col-4">
+      <a href="{{ path('dashboard') }}" class="text-img-option">
+         <img alt="Qries" src="{{ asset('img/login_col.jpg') }}" class="col-option">
+         <span class"span-text">Tienda</span>
+      </a>
+    </div>
+
 </div>
+
 {% endblock %}
